@@ -6,6 +6,11 @@
     <title>Bruna Sousa Portfolio</title>
     <link rel="icon" href="imgs/aprendizagem-online.png" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -25,8 +30,8 @@
       </nav>
     </header>
     <div class="welcome-title">
-      <h2>Meet me, I'm <span> Bruna Sousa</span></h2>
-      <h3>Front end Developer | RPA Developer</h3>
+      <h1>Meet me, I'm <span> Bruna Sousa</span></h1>
+      <h3>Front end Developer</h3>
     </div>
 
     <div class="portfolio-item">
@@ -43,7 +48,7 @@
         data-aos="fade-left"
         data-aos-delay=" 600"
       >
-        <h1>About Me</h1>
+        <h2>About Me</h2>
         <p>
           Hello! Welcome to my Portfolio. I'm Bruna, I'm from Lisbon, Portugal
           and I'm a Front end Developer and also RPA Developer. I started coding
@@ -62,67 +67,25 @@
     <div class="portfolio-description">
       <h2>My skills</h2>
     </div>
-    <div class="container">
-      <div class="card">
-        <div class="imgBx">
-          <img
-            src="imgs/Young-beautiful-female-programmer-Stock-Photo.jpg"
-            alt=""
-          />
-        </div>
-        <div class="content">
-          <h2>Card One</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            iusto, fugiat minima rem cumque praesentium quasi placeat libero
-            voluptatibus adipisci veritatis, aperiam debitis iste maiores
-            voluptates, deleniti blanditiis exercitationem tempore.
-          </p>
-        </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
       </div>
-      <div class="card">
-        <div class="imgBx">
-          <img src="imgs/LOGO_v2-02.png" alt="" />
-        </div>
-        <div class="content">
-          <h2>Card Two</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            iusto, fugiat minima rem cumque praesentium quasi placeat libero
-            voluptatibus adipisci veritatis, aperiam debitis iste maiores
-            voluptates, deleniti blanditiis exercitationem tempore.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBx">
-          <img src="imgs/LOGO_v2-02.png" alt="" />
-        </div>
-        <div class="content">
-          <h2>Card Three</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            iusto, fugiat minima rem cumque praesentium quasi placeat libero
-            voluptatibus adipisci veritatis, aperiam debitis iste maiores
-            voluptates, deleniti blanditiis exercitationem tempore.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBx">
-          <img src="imgs/LOGO_v2-02.png" alt="" />
-        </div>
-        <div class="content">
-          <h2>Card Three</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            iusto, fugiat minima rem cumque praesentium quasi placeat libero
-            voluptatibus adipisci veritatis, aperiam debitis iste maiores
-            voluptates, deleniti blanditiis exercitationem tempore.
-          </p>
-        </div>
-      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
+
     <div class="portfolio-item">
       <div
         class="portfolio-description has-margin-right"
@@ -181,16 +144,25 @@
       </ul>
     </div>
 
+    <!-- Initialize AOS -->
     <script type="text/javascript">
-      function toggle() {
-        var sec = document.getElementById("sec");
-        var nav = document.getElementById("navigation");
-        sec.classList.toggle("active");
-        nav.classList.toggle("active");
-      }
-
       AOS.init({
         duration: 1200,
+      });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
       });
     </script>
   </body>
